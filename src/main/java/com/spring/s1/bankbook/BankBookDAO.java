@@ -14,13 +14,12 @@ public class BankBookDAO {
 	private final String NAMESPACE = "com.spring.s1.bankbook.BankBookDAO.";
 	
 	//Detail
-	public BankBookDTO detail(Long num) throws Exception {
-		return sqlSession.selectOne(NAMESPACE + "detail", num);
+	public BankBookDTO detail(BankBookDTO bankBookDTO) throws Exception {
+		return sqlSession.selectOne(NAMESPACE + "detail", bankBookDTO);
 	}
 	
 	//List 
 	public List<BankBookDTO> list() throws Exception{
-		String name = "";
 		return sqlSession.selectList(NAMESPACE + "list");
 	}
 	
