@@ -16,6 +16,13 @@ public class BankBookController {
 	@Autowired
 	private BankBookService bankBookService;
 	
+	//delete
+	@RequestMapping(value = "delete", method = RequestMethod.GET) 
+	public String delete(BankBookDTO bankBookDTO) throws Exception {
+		int result = bankBookService.delete(bankBookDTO);
+		
+		return "redirect:./list";
+	}
 	
 	//insert form 이동
 	@RequestMapping(value = "add", method = RequestMethod.GET)

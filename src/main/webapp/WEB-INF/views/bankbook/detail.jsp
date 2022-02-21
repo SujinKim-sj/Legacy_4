@@ -29,5 +29,6 @@
 	</table>
 	
 	<a href="./list">List</a>
+	<a href="./delete?bookNumber=${detail.bookNumber}">Delete</a>
 </body>
 </html>
