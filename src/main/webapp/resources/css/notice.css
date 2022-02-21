@@ -1,0 +1,15 @@
+table {
+    width: 60%;
+    margin: 0 auto;
+    background-color: gainsboro;
+}
+
+tr {
+    border: 1px solid black;
+    height: 50px;
+    text-align: center;
+    background-color: white;
+    font-size: 14px;
+    color: gray;
+}
+
