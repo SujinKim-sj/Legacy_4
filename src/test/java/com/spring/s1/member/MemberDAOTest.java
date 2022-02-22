@@ -18,6 +18,16 @@ public class MemberDAOTest extends MyJunitTest{
 	}
 	
 	@Test
+	public void mypageTest() throws Exception {
+		MemberDTO memberDTO = new MemberDTO();
+		memberDTO.setId("nhd001");
+		memberDTO = memberDAO.mypage(memberDTO);
+		
+		assertNotNull(memberDTO);
+	}
+	
+	
+	//@Test
 	public void loginTest() throws Exception {
 		MemberDTO memberDTO = new MemberDTO();
 		memberDTO.setId("ID1");
