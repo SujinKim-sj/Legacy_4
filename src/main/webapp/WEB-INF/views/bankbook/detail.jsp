@@ -29,7 +29,7 @@
 	</table>
 	
 	<a href="./list">List</a>
-	<a href="./update">Update</a>
+	<a href="./update?bookNumber=${detail.bookNumber}">Update</a>
 	<a href="./delete?bookNumber=${detail.bookNumber}">Delete</a>
 </body>
 </html>

@@ -5,6 +5,12 @@
     
 <mapper namespace="com.spring.s1.bankbook.BankBookDAO">
 	
+	<update id="update" parameterType="BankBookDTO">
+		UPDATE BANKBOOK
+		SET BOOKNAME = #{bookName}, BOOKCONTENTS = #{bookContents}, BOOKRATE = #{bookRate}, BOOKSALE = #{bookSale} 
+		WHERE BOOKNUMBER = #{bookNumber}
+	</update>
+	
 	<select id="detail" parameterType="Long" resultType="com.spring.s1.bankbook.BankBookDTO">
 		SELECT * FROM BANKBOOK WHERE BOOKNUMBER = #{bookNumber}
 	</select>

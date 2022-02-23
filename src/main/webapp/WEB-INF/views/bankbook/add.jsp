@@ -7,8 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>BankBook Add Page</h1>
-	<form action="./add" method="post">
+	<h1>BankBook Update Page</h1>
+	<form action="./update" method="post">
 		BookName <input type="text" name="bookName">
 		BookContents <textarea name="bookContents" rows="10" cols=""></textarea>
 		BookRate <input type="text" name="bookRate">
