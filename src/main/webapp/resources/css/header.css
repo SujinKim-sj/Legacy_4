@@ -43,33 +43,6 @@ h1 {
     margin: 50px auto;
 }
 
-table {
-    width: 60%;
-    border-spacing: 0px 5px;
-    border-collapse: separate;  
-    margin: 0 auto;
-    background-color: gainsboro;
-}
-
-tr {
-    border: 1px solid black;
-    height: 50px;
-    text-align: center;
-    background-color: white;
-    font-size: 14px;
-    color: gray;
-}
-
-.nav_table {
-    background-color: black;
-    border-spacing: 0px;
-    border-collapse: collapse;
-}
-
-.nav_table > td {
-    color : white;
-}
-
 body {
     background-color: gainsboro;
 }

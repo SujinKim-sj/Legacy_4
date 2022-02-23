@@ -6,10 +6,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="/s1/resources/css/reset.css">
-<link rel="stylesheet" href="/s1/resources/css/header.css">
+<c:import url="../template/header_css.jsp"></c:import>
+<link rel="stylesheet" href="../resources/css/table.css">
 </head>
 <body>
+	<c:import url="../template/header.jsp"></c:import>
 	<h1>Notice Detail Page</h1>
 	
 	<table>
@@ -33,6 +34,7 @@
 		
 	</table>
 
-	<a href="./list">List</a>
+	<a class="a_class" href="./list">List</a>
+	<a class="a_class" href="./update?noticeNum=${detail.noticeNum}">Update</a>
 </body>
 </html>

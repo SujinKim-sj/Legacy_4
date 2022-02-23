@@ -7,6 +7,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <c:import url="../template/header_css.jsp"></c:import>
+<link rel="stylesheet" href="../resources/css/table.css">
 </head>
 <body>
 	<c:import url="../template/header.jsp"></c:import>
@@ -29,7 +30,7 @@
 
 	</table>
 
-	<a href="./add">ADD</a>
+	<a class="a_class" href="./add">ADD</a>
 	
 </body>
 </html>

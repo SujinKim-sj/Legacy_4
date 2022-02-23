@@ -6,17 +6,20 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<c:import url="../template/header_css.jsp"></c:import>
+<link rel="stylesheet" href="../resources/css/table.css">
 </head>
 <body>
+<c:import url="../template/header.jsp"></c:import>
 	<h1>BankBook List Page</h1>
 	<!-- <h1>${list}</h1> -->
 	
 	<!-- bookName, bookRate, bookSale -->
-	<table border="1">
-		<tr>
-			<th>상품명</th>
-			<th>이자율</th>
-			<th>판매 여부</th>
+	<table>
+		<tr class="nav_table">
+			<td>상품명</td>
+			<td>이자율</td>
+			<td>판매 여부</td>
 		</tr>
 		
 		<c:forEach items="${list}" var="bankbook">
@@ -29,7 +32,7 @@
 		
 	</table>
 	
-	<a href="./add">ADD</a>
+	<a class="a_class" href="./add">ADD</a>
 	
 </body>
 </html>
