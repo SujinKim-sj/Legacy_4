@@ -12,14 +12,14 @@
 <body>
 	<h1>Notice Detail Page</h1>
 	
-	<table border="1">
-		<tr>
-			<th>번호</th>
-			<th>제목</th>
-			<th>내용</th>
-			<th>작성자</th>
-			<th>작성일</th>
-			<th>조회수</th>
+	<table>
+		<tr class="nav_table">
+			<td>번호</td>
+			<td>제목</td>
+			<td>내용</td>
+			<td>작성자</td>
+			<td>작성일</td>
+			<td>조회수</td>
 		</tr>
 
 		<tr>
