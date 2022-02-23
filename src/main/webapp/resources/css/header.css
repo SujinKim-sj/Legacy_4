@@ -77,3 +77,7 @@ body {
 .subject {
     width: 60%;
 }
+
+.icon {
+	vertical-align: bottom;
+}

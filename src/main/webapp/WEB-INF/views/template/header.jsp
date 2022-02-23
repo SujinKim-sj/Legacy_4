@@ -1,8 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
  <!-- Header 시작 -->
 	<header class="header">
 		<nav class="nav_main">
@@ -23,8 +21,8 @@
 				</c:when>
 				
 				<c:otherwise>
-					<li><a href="/s1/member/login">로그인<span class="material-icons">login</span></a></li>
-					<li><a href="/s1/member/join">회원가입<span class="material-icons">person_add</span></a></li>
+					<li><a href="/s1/member/login">로그인<span class="material-icons icon">login</span></a></li>
+					<li><a href="/s1/member/join">회원가입<span class="material-icons icon">person_add</span></a></li>
 				</c:otherwise>	
 			</c:choose>
 			</ul>

@@ -6,17 +6,17 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="/s1/resources/css/reset.css">
-<link rel="stylesheet" href="/s1/resources/css/header.css">
+<c:import url="../template/header_css.jsp"></c:import>
 </head>
 <body>
+	<c:import url="../template/header.jsp"></c:import>
 	<h1>Notice List Page</h1>
 	
-	<table border="1">
-		<tr>
-			<th>제목</th>
-			<th>내용</th>
-			<th>작성자</th>
+	<table>
+		<tr class="nav_table">
+			<td>제목</td>
+			<td>내용</td>
+			<td>작성자</td>
 		</tr>
 
 		<c:forEach items="${list}" var="notice">

@@ -7,18 +7,21 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <c:import url="./template/header_css.jsp"></c:import>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-
+	<style type="text/css">
+		.my::after {
+			content:"e853"
+		}
+	</style>
 </head>
 <body>
 	<c:import url="./template/header.jsp"></c:import>
 	<h1>Index Page</h1>
 	
 	<h3>${member.name}님 환영합니다
-		<span class="material-icons">login</span>
+		<span class="material-icons-outlined">
+		account_circle
+		</span>
 	</h3>
-	<%-- 
 	
 	<div>
 		<c:if test="${not empty member}">
@@ -31,6 +34,6 @@
 			<a href="./member/join">Join</a>	
 		</c:if>
 		
-	</div> --%>
+	</div> 
 </body>
 </html>
