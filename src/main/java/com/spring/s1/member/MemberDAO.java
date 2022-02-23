@@ -12,6 +12,10 @@ public class MemberDAO {
 	private SqlSession sqlSession;
 	private final String NAMESPACE ="com.spring.s1.member.MemberDAO.";
 	
+	public int update(MemberDTO memberDTO) throws Exception {
+		return sqlSession.update(NAMESPACE + "update", memberDTO);
+	}
+	
 	public MemberDTO mypage(MemberDTO memberDTO) throws Exception {
 		return sqlSession.selectOne(NAMESPACE + "mypage", memberDTO);
 	}

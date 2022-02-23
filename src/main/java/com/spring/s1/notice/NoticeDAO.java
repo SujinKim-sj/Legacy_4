@@ -13,6 +13,11 @@ public class NoticeDAO {
 	private SqlSession sqlSession;
 	private final String NAMESPACE = "com.spring.s1.notice.NoticeDAO.";
 	
+	//update
+	public int update(NoticeDTO noticeDTO) throws Exception {
+		return sqlSession.update(NAMESPACE + "update", noticeDTO);
+	}
+	
 	//Detail
 	public NoticeDTO detail(NoticeDTO noticeDTO) throws Exception{
 		return sqlSession.selectOne(NAMESPACE + "detail", noticeDTO);

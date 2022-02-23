@@ -9,6 +9,10 @@ public class MemberService {
 	@Autowired
 	private MemberDAO memberDAO;
 	
+	public int update(MemberDTO memberDTO) throws Exception {
+		return memberDAO.update(memberDTO);
+	}
+	
 	public MemberDTO mypage(MemberDTO memberDTO) throws Exception {
 		return memberDAO.mypage(memberDTO);
 	}

@@ -1,11 +1,13 @@
 package com.spring.s1.notice;
 
+import java.util.Date;
+
 public class NoticeDTO {
 	private Long noticeNum;
 	private String noticeTitle;
 	private String noticeContents;
 	private String noticeWriter;
-	private String noticeRegDate;
+	private Date noticeRegDate;
 	private Integer noticeHit;
 	
 	public NoticeDTO() {
@@ -44,11 +46,11 @@ public class NoticeDTO {
 		this.noticeWriter = noticeWriter;
 	}
 
-	public String getNoticeRegDate() {
+	public Date getNoticeRegDate() {
 		return noticeRegDate;
 	}
 
-	public void setNoticeRegDate(String noticeRegDate) {
+	public void setNoticeRegDate(Date noticeRegDate) {
 		this.noticeRegDate = noticeRegDate;
 	}
 

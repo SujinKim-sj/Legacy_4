@@ -4,6 +4,12 @@
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
    
 <mapper namespace="com.spring.s1.notice.NoticeDAO">
+	<select id="update">
+		UPDATE NOTICE 
+		SET NOTICETITLE = #{noticeTitle}, NOTICECONTENTS = #{noticeContents}			
+		WHERE NOTICENUM = #{noticeNum}
+	</select>
+
 	<select id="detail" parameterType="Long" resultType="NoticeDTO">
 		SELECT * FROM NOTICE WHERE NOTICENUM = #{noticeNum}
 	</select>

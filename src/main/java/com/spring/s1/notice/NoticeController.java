@@ -16,6 +16,20 @@ public class NoticeController {
 	@Autowired
 	private NoticeService noticeService;
 	
+	//update
+	@RequestMapping(value = "update", method = RequestMethod.POST)
+	public String update(NoticeDTO noticeDTO) throws Exception {
+		int result = noticeService.update(noticeDTO);
+		
+		return "redirect:./list";
+	}
+	
+	@RequestMapping(value = "update", method = RequestMethod.GET)
+	public void update(Model model, NoticeDTO noticeDTO) throws Exception {
+		noticeDTO = noticeService.detail(noticeDTO);
+		model.addAttribute("update", noticeDTO);
+	}
+	
 	//add
 	@RequestMapping(value = "add", method = RequestMethod.POST)
 	public String add(NoticeDTO noticeDTO) throws Exception {
