@@ -35,7 +35,7 @@ public class Pager {
 		//2. 전체 page의 개수 구하기
 		Long totalPage = totalCount / this.getPerPage();
 		
-		if(totalCount % this.getPage() != 0) {
+		if(totalCount % this.getPerPage() != 0) {
 			totalPage++;
 		}
 		
