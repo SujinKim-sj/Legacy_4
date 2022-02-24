@@ -8,8 +8,15 @@
 		SELECT * FROM NOTICE WHERE NOTICENUM = #{noticeNum}
 	</select>
 
-	<select id="list" resultType="NoticeDTO">
-		SELECT * FROM NOTICE
+	<select id="total" resultType="Long">
+		SELECT COUNT(noticenum) FROM notice
+	</select>
+
+	<select id="list" parameterType="Pager" resultType="NoticeDTO">
+		SELECT * FROM
+			(SELECT rownum R, B.* FROM
+				(SELECT * FROM notice WHERE noticenum > 0 ORDER BY noticenum DESC) B)
+		WHERE R between #{startRow} and #{lastRow}
 	</select>
 	
 	<insert id="add" parameterType="NoticeDTO">

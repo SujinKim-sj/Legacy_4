@@ -41,13 +41,20 @@ public class NoticeDAOTest extends MyJunitTest{
 	@Test
 	public void addTest() throws Exception {
 		NoticeDTO noticeDTO = new NoticeDTO();
-		noticeDTO.setNoticeTitle("tt");
-		noticeDTO.setNoticeContents("cc");
-		noticeDTO.setNoticeWriter("ww");
+		for(int i = 0; i < 100; i++) {
+			noticeDTO.setNoticeTitle("NoticeTitle" + i);
+			noticeDTO.setNoticeContents("NoticeContents" + i);
+			noticeDTO.setNoticeWriter("Writer" + i);
+			
+			int result = noticeDAO.add(noticeDTO);
+			
+			if(i % 10 == 0) {
+				Thread.sleep(1000);
+			}
+		}
 		
-		int result = noticeDAO.add(noticeDTO);
-		
-		assertEquals(1, result);
+		System.out.println("Insert Finish");
+		//assertEquals(1, result);
 	}
 	
 	//Delete
