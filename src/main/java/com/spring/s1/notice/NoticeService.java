@@ -28,7 +28,7 @@ public class NoticeService {
 		
 		pager.makeRow();
 		
-		Long totalCount = noticeDAO.total();
+		Long totalCount = noticeDAO.total(pager);
 		pager.makeNum(totalCount);
 		
 		List<NoticeDTO> ar = noticeDAO.list(pager);

@@ -36,17 +36,18 @@
     color: white;
 }
 
-h1 {
+/* h1 {
     width: 100%;
     display: flex;
     justify-content: space-around;
     margin: 50px auto;
 }
 
+*/
 
 body {
     background-color: gainsboro;
-}
+} 
 
 .subject {
     width: 60%;

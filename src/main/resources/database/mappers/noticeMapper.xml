@@ -8,14 +8,47 @@
 		SELECT * FROM NOTICE WHERE NOTICENUM = #{noticeNum}
 	</select>
 
-	<select id="total" resultType="Long">
-		SELECT COUNT(noticenum) FROM notice
+	<select id="total" resultType="Long" parameterType="Pager">
+		SELECT COUNT(noticeNum) FROM notice
+		WHERE noticeNum > 0 
+				and 
+				
+				<choose>
+					<when test="kind=='col1'">
+						NOTICETITLE
+					</when>
+					<when test="kind=='col2'">
+						NOTICECONTENTS
+					</when>
+					<otherwise>
+						NOTICEWRITER
+					</otherwise>
+				</choose>
+				
+				LIKE '%' || #{search} || '%'
 	</select>
 
 	<select id="list" parameterType="Pager" resultType="NoticeDTO">
 		SELECT * FROM
-			(SELECT rownum R, B.* FROM
-				(SELECT * FROM notice WHERE noticenum > 0 ORDER BY noticenum DESC) B)
+			(SELECT rowNum R, B.* FROM
+				(SELECT * FROM notice 
+				WHERE noticeNum > 0 
+				and 
+				
+				<choose>
+					<when test="kind=='col1'">
+						NOTICETITLE
+					</when>
+					<when test="kind=='col2'">
+						NOTICECONTENTS
+					</when>
+					<otherwise>
+						NOTICEWRITER
+					</otherwise>
+				</choose>
+				
+				LIKE '%' || #{search} || '%'
+				ORDER BY noticeNum DESC) B)
 		WHERE R between #{startRow} and #{lastRow}
 	</select>
 	

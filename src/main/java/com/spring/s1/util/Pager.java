@@ -14,7 +14,10 @@ public class Pager {
 	//끝 번호
 	private Long lastRow;
 
-
+	//---------------검색 사용 변수 -------------------
+	private String search;
+	private String kind;
+	
 	//---------------JSP 사용 변수 -------------------
 	private Long startNum;
 	private Long lastNum;
@@ -74,7 +77,12 @@ public class Pager {
 		if(curBlock == totalBlock) {
 			this.lastNum = totalPage;
 		}
-
+		
+		
+		//9. 검색 결과가 없어서 Total이 0일때
+		if(totalCount == 0) {
+			this.lastNum = 0L;
+		}
 	}
 	
 	//Getter & Setter 
@@ -134,6 +142,25 @@ public class Pager {
 	}
 	public void setNext(boolean next) {
 		this.next = next;
+	}
+
+	public String getSearch() {
+		if(this.search == null) {
+			this.search = "";
+		}
+		return search;
+	}
+
+	public void setSearch(String search) {
+		this.search = search;
+	}
+
+	public String getKind() {
+		return kind;
+	}
+
+	public void setKind(String kind) {
+		this.kind = kind;
 	}
 	
 
