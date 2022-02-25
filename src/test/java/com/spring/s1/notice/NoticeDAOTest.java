@@ -20,12 +20,12 @@ public class NoticeDAOTest extends MyJunitTest{
 	}
 	
 	//List
-	@Test
-	public void listTest() throws Exception {
-		List<NoticeDTO> ar = noticeDAO.list();
-		
-		assertNotEquals(0, ar.size());
-	}
+//	@Test
+//	public void listTest() throws Exception {
+//		List<NoticeDTO> ar = noticeDAO.list();
+//		
+//		assertNotEquals(0, ar.size());
+//	}
 	
 	//Detail
 	@Test
