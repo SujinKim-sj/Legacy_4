@@ -1,15 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+   <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<c:import url="../template/header_css.jsp"></c:import>
+<link href="../resources/css/table.css" rel="stylesheet">
+<link href="../resources/css/list.css" rel="stylesheet">
 </head>
 <body>
+<c:import url="../template/header.jsp"></c:import>
 	<h1>BankBook Detail Page</h1>
 	
-	<table border="1">
+	<table class="table-basic">
 		<tr>
 			<th>번호</th>
 			<th>상품명</th>
