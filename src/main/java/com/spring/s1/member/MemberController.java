@@ -65,13 +65,25 @@ public class MemberController {
 		
  		//model.addAttribute("member", memberDTO);
 		
-		String path = "redirect:./login";
+//		String path = "redirect:./login";
+//		
+//		if(memberDTO != null) {
+//			session.setAttribute("member", memberDTO);
+//			path = "redirect:../";
+//		}
+//		
+		String message = "Login Fail";
+		String p = "./login";
 		
 		if(memberDTO != null) {
 			session.setAttribute("member", memberDTO);
-			path = "redirect:../";
+			message = "Login Success";
+			p = "../";
 		}
 		
+		model.addAttribute("message", message);
+		model.addAttribute("path", p);
+		String path = "common/result";
 		return path;
 	}
 	
