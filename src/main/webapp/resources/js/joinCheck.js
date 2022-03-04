@@ -29,7 +29,20 @@ for(ch of check) {
 const btn = document.getElementById('btn');
 
 btn.addEventListener("click", function() {
+
+    // let c = true;
+    // for(ch of check) {
+    //     if(!ch.checked) {
+    //         c = false;
+    //     }
+    // }
+
+    //if(c) {
+    
     if(checkAll.checked) {
-        location.href = "./join"
+        location.href = "./join";
+    } else {
+        alert("약관 동의 필요");
     }
-})
+});
+
