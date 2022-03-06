@@ -19,12 +19,12 @@ public class QnaDAOTest extends MyJunitTest{
 		assertNotNull(qnaDAO);
 	}
 
-	@Test
-	public void listTest() throws Exception{
-		List<QnaDTO> ar = qnaDAO.list();
-		
-		assertNotEquals(0, ar.size());
-	}
+//	@Test
+//	public void listTest() throws Exception{
+//		List<QnaDTO> ar = qnaDAO.list();
+//		
+//		assertNotEquals(0, ar.size());
+//	}
 	
 	@Test
 	public void detailTest() throws Exception {
