@@ -5,9 +5,29 @@
 }
 
 .title {
-    margin-top: 50px;
+    margin-top: 50px;   
 }
 
 .table-container > .table-basic {
     margin-top: 50px;
 }
+
+fieldset {
+    margin-top: 30px;
+    border: 0px;
+}
+
+.page-button {
+	color : #4ebaaa;
+}
+
+a:hover {
+	color : #4ebaaa;
+}
+
+.pager-class {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
