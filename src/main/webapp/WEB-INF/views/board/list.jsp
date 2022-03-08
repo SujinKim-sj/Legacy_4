@@ -17,16 +17,27 @@
 	<div class="table-container">
 		<table class="table-basic">
 			<tr class="nav_table">
+				<td>번호</td>
 				<td>제목</td>
-				<td>내용</td>
 				<td>작성자</td>
+				<td>날짜</td>
+				<td>조회수</td>
 			</tr>
 	
-			<c:forEach items="${list}" var="notice">
+			<c:forEach items="${list}" var="dto">
 				<tr>
-					<td><a href="./detail?num=${notice.num}">${notice.title}</a></td>
-				    <td>${notice.contents}</td>
-				    <td>${notice.writer}</td>
+					<td>${dto.num}</td>
+					<td>
+						<a href="./detail?num=${dto.num}">
+							<c:catch>
+								<c:forEach begin="1" end="${dto.depth}">--</c:forEach>						
+							</c:catch>
+							${dto.title}
+						</a>
+					</td>
+				    <td>${dto.writer}</td>
+				    <td>${dto.regDate}</td>
+				    <td>${dto.hit}</td>
 				</tr>            
 			</c:forEach>
 	

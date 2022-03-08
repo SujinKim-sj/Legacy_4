@@ -4,6 +4,16 @@
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
    
 <mapper namespace="com.spring.s1.board.qna.QnaDAO">
+	<insert id="reply" parameterType="QnaDTO">
+		INSERT INTO QNA
+		VALUES(QNA_SEQ.NEXTVAL, #{title}, #{contents}, #{writer}, SYSDATE, 0, #{ref}, #{step}, #{depth})
+	</insert>
+
+	<update id="stepUpdate" parameterType="QnaDTO">
+		UPDATE QNA SET STEP = STEP + 1
+		WHERE REF = #{ref} AND STEP > #{step}
+	</update>
+
 	<select id="detail" parameterType="Long" resultType="QnaDTO">
 		SELECT * FROM QNA WHERE NUM = #{num}
 	</select>
@@ -43,7 +53,7 @@
 				</choose>
 
 				LIKE '%' || #{search} || '%'
-		        ORDER BY NUM DESC) B)
+		        ORDER BY REF DESC, STEP ASC) B)
 		WHERE R between #{startRow} and #{lastRow}
 	</select>
 	
