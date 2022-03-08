@@ -38,7 +38,9 @@
 		<a href="./list">List</a>
 		<a href="./update?num=${detail.num}">Update</a>
 		<a href="./delete?num=${detail.num}">Delete</a>
-		<a href="./reply?num=${detail.num}">Reply</a>
+		<c:if test="${board ne 'notice'}">
+			<a href="./reply?num=${detail.num}">Reply</a>
+		</c:if>
 	</div>
 </body>
 </html>
