@@ -13,6 +13,6 @@
 	<h3>NAME : ${member.name}</h3>
 	<h3>PHONE : ${member.phone}</h3>
 	<h3>EMAIL : ${member.email}</h3>
-	
+	<img alt="" src="파일의경로명">
 </body>
 </html>

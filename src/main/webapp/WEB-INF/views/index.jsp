@@ -15,6 +15,10 @@
 </head>
 <body>
 	<c:import url="./template/header.jsp"></c:import>
+	<div>
+		<img alt="" src="./resources/images/bears.jpg">
+	</div>
+	
 	<h1>Index Page</h1>
 	
 	<h3>${member.name}님 환영합니다

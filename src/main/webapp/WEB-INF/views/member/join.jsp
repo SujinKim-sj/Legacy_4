@@ -1,17 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<c:import url="../template/header_css.jsp"></c:import>
 <link rel="stylesheet" href="../resources/css/form.css">
 </head>
 <body>
+	<c:import url="../template/header.jsp"></c:import>
 	<h1>Member Join Page</h1>
 	
 	<div>
-		<form class="frm" action="./join" method="post" id="frm">
+		<form class="frm" action="./join" method="post" id="frm" enctype="multipart/form-data">
 			<fieldset>
 				<legend>ID</legend>
 				<input type="text" name="id" id="id1">
@@ -45,7 +48,12 @@
 				<input type="text" name="email" id="email">
 			</fieldset>
 			
-			<button type="button" id="btn">JOIN</button>
+			<fieldset>
+				<legend>Photo</legend>
+				<input type="file" name="photo" id="photo">
+			</fieldset>
+			
+			<button class="submit-class" type="button" id="btn">JOIN</button>
 		</form>
 			
 	</div>
