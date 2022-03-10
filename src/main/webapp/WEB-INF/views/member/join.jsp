@@ -53,11 +53,15 @@
 				<input type="file" name="photo" id="photo">
 			</fieldset>
 			
-			<button class="submit-class" type="button" id="btn">JOIN</button>
+			<fieldset>
+			<!-- 최종완성시 사용하세요 <button class="submit-class" type="button" id="btn">JOIN</button> -->
+				<button class="submit-class" type="submit" id="btn">JOIN</button>	
+			</fieldset>
+	 		
 		</form>
 			
 	</div>
 	
-	<script src="../resources/js/join2.js"></script>
+	<!-- <script src="../resources/js/join2.js"></script> -->
 </body>
 </html>

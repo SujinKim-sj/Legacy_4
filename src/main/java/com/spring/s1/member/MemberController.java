@@ -101,6 +101,7 @@ public class MemberController {
 		System.out.println(photo.getOriginalFilename());
 		System.out.println(photo.getSize());	//byte
 		int result = memberService.join(memberDTO, photo);
+		
 		return "redirect:../";
 	}
 	

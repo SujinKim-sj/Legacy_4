@@ -39,5 +39,8 @@
 		</c:if>
 		
 	</div> 
+	
+	<img alt="" src="./resources/upload/member/62560083-1cc5-4adf-80a1-c69ff605c459_bears.jpg">
+	
 </body>
 </html>
