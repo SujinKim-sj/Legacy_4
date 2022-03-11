@@ -12,11 +12,16 @@
 <body>
 	<c:import url="../template/header.jsp"></c:import>
 	<h1 class="title">${board} Add Page</h1>
-	<form class="frm" action="./add" method="post">
+	<form class="frm" action="./add" method="post" enctype="multipart/form-data">
 		Title<input type="text" name="title">
-		Contents <textarea name="contents" rows="10" cols=""></textarea>
+		Contents <textarea name="contents" rows="10" cols="70"></textarea>
 		Writer <input type="text" name="writer">
-
+		
+		<div>
+			<input type="file" name="files">
+			<input type="file" name="files">
+			<input type="file" name="files">	
+		</div>
 		<input type="submit" value="ADD">
 	</form> 
 </body>

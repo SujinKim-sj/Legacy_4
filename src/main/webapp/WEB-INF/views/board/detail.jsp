@@ -35,6 +35,12 @@
 			
 		</table>
 	
+		<div>
+			<c:forEach items="${detail.fileDTOs}" var="f">
+				<a href="../resources/upload/${board}/${f.fileName}">${f.oriName}</a>
+			</c:forEach>
+		</div>
+		
 		<a href="./list">List</a>
 		<a href="./update?num=${detail.num}">Update</a>
 		<a href="./delete?num=${detail.num}">Delete</a>
