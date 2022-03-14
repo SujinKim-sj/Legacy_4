@@ -5,6 +5,7 @@ import java.util.List;
 import com.spring.s1.util.Pager;
 
 public interface BoardDAO {
+	
 	//addFile
 	public int addFile(BoardFileDTO boardFileDTO) throws Exception;
 	

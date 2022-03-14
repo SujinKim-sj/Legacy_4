@@ -19,6 +19,10 @@ public class NoticeDAO implements BoardDAO {
 	private SqlSession sqlSession;
 	private final String NAMESPACE = "com.spring.s1.board.notice.NoticeDAO.";
 	
+	public NoticeFileDTO detailFile(NoticeFileDTO noticeFileDTO) throws Exception {
+		return sqlSession.selectOne(NAMESPACE + "detailFile", noticeFileDTO);
+	}
+	
 	@Override
 	public int addFile(BoardFileDTO boardFileDTO) throws Exception {
 		return sqlSession.insert(NAMESPACE + "addFile", boardFileDTO);
@@ -54,7 +58,5 @@ public class NoticeDAO implements BoardDAO {
 		// TODO Auto-generated method stub
 		return sqlSession.selectOne(NAMESPACE + "total", pager);
 	}
-	
-
 	
 }

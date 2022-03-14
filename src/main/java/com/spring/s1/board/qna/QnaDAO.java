@@ -20,6 +20,10 @@ public class QnaDAO implements BoardDAO{
 	private SqlSession sqlSession;
 	private final String NAMESPACE = "com.spring.s1.board.qna.QnaDAO.";
 	
+	public QnaFileDTO detailFile(QnaFileDTO qnaFileDTO) throws Exception {
+		return sqlSession.selectOne(NAMESPACE + "detailFile", qnaFileDTO);
+	}
+	
 	public int addFile(BoardFileDTO boardFileDTO) throws Exception{
 		return sqlSession.insert(NAMESPACE + "addFile", boardFileDTO);
 	}

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.spring.s1.board.BoardDTO;
+import com.spring.s1.board.BoardFileDTO;
 import com.spring.s1.board.BoardService;
 import com.spring.s1.board.qna.QnaDAO;
 import com.spring.s1.util.FileManager;
@@ -20,6 +21,10 @@ public class NoticeService implements BoardService{
 	
 	@Autowired
 	private FileManager fileManager;
+	
+	public NoticeFileDTO detailFile(NoticeFileDTO noticeFileDTO) throws Exception {
+		return noticeDAO.detailFile(noticeFileDTO);
+	}
 	
 	@Override
 	public List<BoardDTO> list(Pager pager) throws Exception {
