@@ -15,7 +15,7 @@
 	<form class="frm" action="./add" method="post" enctype="multipart/form-data">
 		Title<input type="text" name="title">
 		Contents <textarea name="contents" rows="10" cols="70"></textarea>
-		Writer <input type="text" name="writer">
+		Writer <input type="text" name="writer" value="${member.id}" readonly="readonly">
 		
 		<div>
 			<input type="file" name="files">

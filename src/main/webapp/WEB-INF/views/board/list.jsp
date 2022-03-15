@@ -55,8 +55,11 @@
 		        <a class="page-button" href="./list?page=${pager.lastNum+1}">NEXT</a>
 		    </c:if>
 		</div>
-	
-		<a href="./add">ADD</a>
+		<!-- 로그인했을 경우에만 ADD버튼 보임 -->
+		<c:if test="${not empty member}">
+			<a href="./add">ADD</a>	
+		</c:if>
+			
 	</div>
 </body>
 </html>

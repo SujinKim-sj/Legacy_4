@@ -43,8 +43,13 @@
 		</div>
 		
 		<a href="./list">List</a>
-		<a href="./update?num=${detail.num}">Update</a>
-		<a href="./delete?num=${detail.num}">Delete</a>
+		
+		<!-- 작성자와 로그인한 회원의 id가 같아야 수정, 삭제 가능 -->
+		<c:if test="${member.id eq detail.writer}">
+			<a href="./update?num=${detail.num}">Update</a>
+			<a href="./delete?num=${detail.num}">Delete</a>		
+		</c:if>
+		
 		<c:if test="${board ne 'notice'}">
 			<a href="./reply?num=${detail.num}">Reply</a>
 		</c:if>
