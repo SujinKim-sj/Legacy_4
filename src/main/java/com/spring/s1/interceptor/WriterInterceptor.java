@@ -25,6 +25,7 @@ public class WriterInterceptor extends HandlerInterceptorAdapter {
 		// TODO Auto-generated method stub
 		boolean check = true;
 		
+		System.out.println("Writer Interceptor");
 		Long num = Long.valueOf(request.getParameter("num"));	//parseLong
 		
 		BoardDTO boardDTO = new QnaDTO();
